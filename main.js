@@ -1,6 +1,8 @@
 class DOBS{
   constructor(){
     var dobf = {};
+    dobf.vari = {};
+    dobf.set(v, to, val){dobf[v] = val;}
   }
   run(q){
     let arr = q.split(" ")
