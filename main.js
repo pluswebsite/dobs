@@ -2,7 +2,9 @@ class DOBS{
   constructor(){
     var dobf = {};
     dobf.vari = {};
-    dobf.set(v, to, val){dobf[v] = val;}
+    dobf.create = function(v, id, binid, key, mkey){
+      dobf.vari[v] = {"id": binid, "key": mkey}
+    }
   }
   run(q){
     let arr = q.split(" ")
