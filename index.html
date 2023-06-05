@@ -15,9 +15,9 @@
   function keyup(e){
     if(e.keyCode == 13){
       document.getElementById("com").innerHTML = document.getElementById("in").value;
-      try{document.getElementById("res").innerHTML = _(document.getElementById("in").value)}
+      try{_(document.getElementById("in").value)}
       catch(e){
-        document.getElementById("res").innerHTML;
+        document.getElementById("res").innerHTML = e;
       }
       document.getElementById("in").value = "";
     }
