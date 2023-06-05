@@ -7,6 +7,9 @@ function _(script){
             if(arr[a][0] != "'"){
                 arr[a] = "'" + arr[a] + "'";
             }
+            if(arr[a][0] === "%"){
+                arr[a] = "'" + eval(arr[a].replaceAll("%","")) + "'";
+            }
         }
         let str = arr.toString();
         eval(fun + "(" + str + ")")
