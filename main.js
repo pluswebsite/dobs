@@ -4,11 +4,10 @@ function _(script){
         let fun = arr[0];
         arr.shift();
         for(let a in arr){
-            if(arr[a][0] != "'"){
-                arr[a] = "'" + arr[a] + "'";
-            }
             if(arr[a][0] == "%"){
                 arr[a] = eval(arr[a].replaceAll("%",""));
+            } else if(arr[a][0] != "'"){
+                arr[a] = "'" + arr[a] + "'";
             }
         }
         let str = arr.toString();
