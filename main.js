@@ -9,5 +9,5 @@
             }
         }
         let str = arr.toString();
-        eval("dobf." + fun + "(" + str + ")")
+        eval(fun + "(" + str + ")")
     }
