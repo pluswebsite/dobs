@@ -11,6 +11,6 @@
         let str = arr.toString();
         eval(fun + "(" + str + ")")
     }
-function set(vr, to, vl){
-    eval("var " + vr + " = " + vl)
+function set(vl, to, vr){
+    eval("var " + vr + " = '" + vl + "'")
 }
