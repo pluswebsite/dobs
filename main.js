@@ -5,7 +5,7 @@ function _(script){
         arr.shift();
         for(let a in arr){
             if(arr[a][0] == "%"){
-                arr[a] = eval(arr[a].replaceAll("%",""));
+                arr[a] = "'" + eval(arr[a].replaceAll("%","")) + "'";
             } else if(arr[a][0] != "'"){
                 arr[a] = "'" + arr[a] + "'";
             }
