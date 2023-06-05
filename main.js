@@ -1,5 +1,3 @@
-var us = {}
-us.v = {}
 function _(script){
         var q = script;
         let arr = q.split(" ")
@@ -14,5 +12,5 @@ function _(script){
         eval(fun + "(" + str + ")")
     }
 function set(vl, to, vr){
-    us.v[vr] = vl;
+    window[vr] = vl;
 }
