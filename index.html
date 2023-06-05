@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>UnderScript</title>
+  </head>
+  <body>
+    <input type="text" id="in"><br>
+    <div>
+      <h1 id="com"></h1>
+      <br>
+      <p id="res"></p>
+    </div>
+  </body>
+  <script src="main.js"></script>
+  <script>
+  function keyup(e){
+    if(e.keyCode == 13){
+      document.getElementById("com").innerHTML = document.getElementById("in").value;
+      try{document.getElementById("res").innerHTML = _(document.getElementById("in").value)}
+      catch(e){
+        document.getElementById("res").innerHTML;
+      }
+      document.getElementById("in").value = "";
+    }
+  }
+    
+  console.log = function(a){
+    document.getElementById("res").innerHTML = a;
+  }
+  document.getElementById("in").addEventListener("keyup",keyup)
+  </script>
+</html>
